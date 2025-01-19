@@ -10,6 +10,9 @@
 </head>
 <body>
     <div class="flex min-h-full flex-col justify-center px-10 py-12 lg:px-8">
+        <div class=" sm:mx-auto sm:w-full sm:max-w-sm">
+            <a href="/login" class=" font-bold text-2xl text-blue-800"><</a>
+        </div>
         <div class=" sm:mx-auto sm:w-full sm:max-w-sm my-12">
             <h2 class=" text-center text-3xl font-bold text-blue-800">cignifi</h2>
         </div>
@@ -20,6 +23,9 @@
             </div>
             <div class=" mt-6 text-center">
                 <input type="password" name="password" id="password" placeholder="  Password" class=" border min-w-full h-[50px] rounded-md shadow-md">
+            </div>
+            <div class=" mt-6 text-center">
+                <input type="email" name="email" id="email" placeholder="   Confirm Password" class=" border min-w-full h-[50px] rounded-md shadow-md">
             </div>
             <div class=" mt-6 text-center">
                 <button class=" bg-blue-800 text-white min-w-full h-[50px] rounded-md font-medium shadow-md shadow-blue-800">Sign in</button>
@@ -39,10 +45,10 @@
                 </div>
             </div>
         </div>
-        <div class=" mt-20 flex justify-center">
+        <!-- <div class=" mt-20 flex justify-center">
             <h2 class=" text-slate-400 font-medium">Don,t have an account?</h2>
-            <a href="/signup" class=" font-medium text-blue-500 ml-1">Sign up</a>
-        </div>
+            <a href="#" class=" font-medium text-blue-500 ml-1">Sing ip</a>
+        </div> -->
     </div>
 </body>
 </html>
