@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="dist/styles.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Login</title>
+    <title>Sign Up</title>
     @vite('resources/css/app.css')
 </head>
 <body>
@@ -32,16 +32,16 @@
             </div>
         </div>
         <div class=" mt-14 sm:mx-auto sm:w-full sm:max-w-sm text-center">
-            <label for="" class=" text-slate-400 font-medium">- Or sign in with -</label>
-            <div class="mt-6 flex items-stretch justify-center">
-                <div class=" size-20 border mx-2 h-16">
-                    <a href="#" class="">google</a>
+            <label for="" class=" text-slate-400 font-medium">- Or sign up with -</label>
+            <div class="mt-6 flex items-stretch justify-center space-x-7">
+                <div class=" flex size-20 border mx-2 h-16 items-center justify-center">
+                    <a href="#" class=""><img src="/assets/img/google.png" class=" size-8" alt=""></a>
                 </div>
-                <div class=" size-20 border mx-2 h-16">
-                    <a href="#" class="">facebook</a>
+                <div class=" flex size-20 border mx-2 h-16 items-center justify-center">
+                    <a href="#" class=""><img src="/assets/img/facebook.png" class=" size-8" alt=""></a>
                 </div>
-                <div class=" size-20 border mx-2 h-16">
-                    <a href="#" class="">x</a>
+                <div class=" flex size-20 border mx-2 h-16 items-center justify-center">
+                    <a href="#" class=""><img src="/assets/img/x.png" class=" size-8" alt=""></a>
                 </div>
             </div>
         </div>
