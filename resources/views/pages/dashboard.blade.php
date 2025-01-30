@@ -102,7 +102,7 @@
                     </button>
                 </div>
                 <div class="flex h-full w-auto items-center ml-2.5 md:ml-5">
-                    <a href="" class="flex font-medium bg-blue-500 py-1 md:py-2 px-6 text-white rounded-md shadow-md">+ <h1 class=" hidden md:block">Tambah</h1></a>
+                    <a href="" class="flex font-medium bg-blue-500 py-1 md:py-2 px-6 text-white rounded-md shadow-md">+ <h1 class=" hidden md:block ml-2">Tambah</h1></a>
                 </div>
             </div>
             <div class="flex w-[365px] md:w-full h-screen ">
@@ -123,9 +123,9 @@
                             <tbody>
                                 <tr class="border-b">
                                     <td class="py-2 text-center">1</td>
-                                    <td class="text-left">Asep</td>
-                                    <td class="text-left">asep@gmail.com</td>
-                                    <td class="text-center">PDF</td>
+                                    <td class="text-left">Iyan</td>
+                                    <td class="text-left">iyan@gmail.com</td>
+                                    <td class="text-center"><a href="#" class=" bg-green-500 px-2 py-1 rounded-md text-white">Detail</a></td>
                                     <td class="text-left">
                                         <div class="py-1.5 px-5 text-xs font-semibold text-green-500 rounded-full bg-green-50">Aktif</div>
                                     </td>
@@ -138,7 +138,7 @@
                                     <td class="py-2 text-center">2</td>
                                     <td class="text-left">Budi</td>
                                     <td class="text-left">budi@gmail.com</td>
-                                    <td class="text-center">Excel</td>
+                                    <td class="text-center"><a href="#" class=" bg-green-500 px-2 py-1 rounded-md text-white">Detail</a></td>
                                     <td class="text-left">
                                         <div class="py-1.5 px-5 text-xs font-semibold text-orange-500 rounded-full bg-orange-50">Pending</div>
                                     </td>
@@ -151,7 +151,7 @@
                                     <td class="py-2 text-center">3</td>
                                     <td class="text-left">Caca</td>
                                     <td class="text-left">caca@gmail.com</td>
-                                    <td class="text-center">CSV</td>
+                                    <td class="text-center"><a href="#" class=" bg-green-500 px-2 py-1 rounded-md text-white">Detail</a></td>
                                     <td class="text-left">
                                         <div class="py-1.5 px-5 text-xs font-semibold text-yellow-500 rounded-full bg-yellow-50">In Progress</div>
                                     </td>
