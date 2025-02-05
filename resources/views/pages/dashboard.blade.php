@@ -101,7 +101,7 @@
                     </button>
                 </div>
                 <div class="flex h-full w-auto items-center ml-2.5 md:ml-5">
-                    <a href="" class="flex font-medium bg-blue-500 py-1 md:py-2 px-6 text-white rounded-md shadow-md">+ <h1 class=" hidden md:block">Tambah</h1></a>
+                    <a href="laporan/tambah" class="flex font-medium bg-blue-500 py-1 md:py-2 px-6 text-white rounded-md shadow-md">+ <h1 class=" hidden md:block">Tambah</h1></a>
                 </div>
             </div>
             <div class="flex w-[365px] md:w-full h-screen ">

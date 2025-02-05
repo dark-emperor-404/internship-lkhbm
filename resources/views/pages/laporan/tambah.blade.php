@@ -3,99 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="dist/styles.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Tambah</title>
     @vite('resources/css/app.css')
 </head>
-<body>
-    <div class=" flex h-screen bg-gray-200 items-center justify-center">
-        <div class=" w-1/3 h-5/6 bg-white rounded-xl">
-            <div class=" flex py-3 px-4 h-14">
-                <div class=" flex">
-                    <a href="/laporan" class=" flex p-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class=" w-4 h-4 stroke-gray-500">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                        </svg>
-                    </a>
-                </div>
-                <!-- <div>
-                    <button class=" p-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class=" w-3.5 h-3.5 stroke-gray-500">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
-                        </svg>
-                    </button>
-                </div> -->
-                <div>
-                    <h1 class=" px-20 text-gray-400 font-semibold">Tambah</h1>
-                </div>
-            </div>
-            <div class=" py-3 px-4">
-                <form action="/laporan" method="" autocomplete="off">
-                    <div class=" mb-3.5">
-                        <label for="" class="form-label">Nama</label>
-                        <input
-                            type="text"
-                            class="form-control border"
-                            name="nama"
-                            id="nama"
-                            aria-describedby="helpId"
-                            placeholder=" nama"
-                            />
-                        <small id="helpId" class="form-text text-muted"></small>
-                    </div>
-                    <div class="mb-3.5">
-                        <label for="" class="form-label">Email</label>
-                        <input
-                            type="email"
-                            class="form-control border"
-                            name="email"
-                            id="email"
-                            aria-describedby="helpId"
-                            placeholder=" email"
-                            />
-                        <small id="helpId" class="form-text text-muted"></small>
-                    </div>
-                    <div class="mb-3.5">
-                        <label for="" class="form-label">Password</label>
-                        <input
-                            type="password"
-                            class="form-control border"
-                            name="password"
-                            id="password"
-                            aria-describedby="helpId"
-                            placeholder=" password"
-                            />
-                        <small id="helpId" class="form-text text-muted"></small>
-                    </div>
-                    <div class="mb-3.5">
-                        <label for="" class="form-label">Status</label>
-                        <select
-                            class="form-select form-select-lg border"
-                            name="status"
-                            id="status"
-                            >
-                            <option selected>Aktif</option>
-                            <option value="">Pending</option>
-                            <option value="">In Progres</option>
-                        </select>
-                    </div>
-                    <div class="mb-3.5">
-                        <label for="" class="form-label">Date</label>
-                        <input
-                            type="date"
-                            class="form-control border"
-                            name="date"
-                            id="date"
-                            aria-describedby="helpId"
-                            placeholder=""
-                            />
-                        <small id="helpId" class="form-text text-muted"></small>
-                    </div>
-                    <button type="submit" class=" p-1 border bg-blue-500 text-white rounded-md">simpan</button>
-                </form>
-            </div>
+<body class="bg-gray-200 flex items-center justify-center min-h-screen p-4">
+    <div class="bg-white w-full sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl rounded-xl shadow-lg p-6 flex flex-col gap-4">
+        <div class="flex items-center justify-between border-b pb-3">
+            <a href="/laporan" class="p-2 text-gray-500 hover:text-gray-700">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+            </a>
+            <h1 class="text-gray-600 font-semibold text-lg">Tambah</h1>
+            <div></div>
         </div>
+
+        <form action="/laporan" method="POST" autocomplete="off" class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div class="flex flex-col gap-2 sm:col-span-2">
+                <label for="nama" class="text-sm font-medium text-gray-700">Nama</label>
+                <input type="text" id="nama" name="nama" class="border rounded-lg p-2 focus:ring-2 focus:ring-blue-400" placeholder="Nama" required>
+            </div>
+            
+            <div class="flex flex-col gap-2">
+                <label for="email" class="text-sm font-medium text-gray-700">Email</label>
+                <input type="email" id="email" name="email" class="border rounded-lg p-2 focus:ring-2 focus:ring-blue-400" placeholder="Email" required>
+            </div>
+            
+            <div class="flex flex-col gap-2">
+                <label for="password" class="text-sm font-medium text-gray-700">Password</label>
+                <input type="password" id="password" name="password" class="border rounded-lg p-2 focus:ring-2 focus:ring-blue-400" placeholder="Password" required>
+            </div>
+            
+            <div class="flex flex-col gap-2 sm:col-span-2">
+                <label for="status" class="text-sm font-medium text-gray-700">Status</label>
+                <select id="status" name="status" class="border rounded-lg p-2 focus:ring-2 focus:ring-blue-400">
+                    <option selected>Aktif</option>
+                    <option value="pending">Pending</option>
+                    <option value="in-progress">In Progress</option>
+                </select>
+            </div>
+            
+            <div class="flex flex-col gap-2 sm:col-span-2">
+                <label for="date" class="text-sm font-medium text-gray-700">Date</label>
+                <input type="date" id="date" name="date" class="border rounded-lg p-2 focus:ring-2 focus:ring-blue-400" required>
+            </div>
+            
+            <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-200 sm:col-span-2">Simpan</button>
+        </form>
     </div>
 </body>
 </html>
