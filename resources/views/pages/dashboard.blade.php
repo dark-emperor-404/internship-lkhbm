@@ -30,7 +30,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/laporan" class="flex items-center space-x-2 hover:bg-gray-100 p-2 rounded-md">
+                    <a href="/user" class="flex items-center space-x-2 hover:bg-gray-100 p-2 rounded-md">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
@@ -101,7 +101,7 @@
                     </button>
                 </div>
                 <div class="flex h-full w-auto items-center ml-2.5 md:ml-5">
-                    <a href="laporan/tambah" class="flex font-medium bg-blue-500 py-1 md:py-2 px-6 text-white rounded-md shadow-md">+ <h1 class=" hidden md:block">Tambah</h1></a>
+                    <a href="user/tambah" class="flex font-medium bg-blue-500 py-1 md:py-2 px-6 text-white rounded-md shadow-md">+ <h1 class=" hidden md:block">Tambah</h1></a>
                 </div>
             </div>
             <div class="flex w-[365px] md:w-full h-screen ">
