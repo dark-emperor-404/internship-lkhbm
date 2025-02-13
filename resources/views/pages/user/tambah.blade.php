@@ -19,10 +19,11 @@
             <div></div>
         </div>
 
-        <form action="/user" method="POST" autocomplete="off" class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <form action="/user/simpan" method="POST" autocomplete="off" class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            @csrf
             <div class="flex flex-col gap-2 sm:col-span-2">
-                <label for="nama" class="text-sm font-medium text-gray-700">Nama</label>
-                <input type="text" id="nama" name="nama" class="border rounded-lg p-2 focus:ring-2 focus:ring-blue-400" placeholder="Nama" required>
+                <label for="name" class="text-sm font-medium text-gray-700">Nama</label>
+                <input type="text" id="name" name="name" class="border rounded-lg p-2 focus:ring-2 focus:ring-blue-400" placeholder="Name" required>
             </div>
             
             <div class="flex flex-col gap-2">

@@ -11,7 +11,7 @@
 <body>
     <div class="flex min-h-full flex-col justify-center px-10 py-12 lg:px-8">
         <div class=" sm:mx-auto sm:w-full sm:max-w-sm">
-            <a href="/login" class=" font-bold text-2xl text-blue-800"><</a>
+            <a href="/" class=" font-bold text-2xl text-blue-800"><</a>
         </div>
         <div class=" sm:mx-auto sm:w-full sm:max-w-sm my-12">
             <h2 class=" text-center text-3xl font-bold text-blue-800">cignifi</h2>

@@ -64,7 +64,7 @@
                     </button>
                 </div>
                 <div class="flex h-full w-auto items-center ml-2.5 md:ml-5">
-                    <a href="/laporan/tambah" class="flex font-medium bg-blue-500 py-1 md:py-2 px-6 text-white rounded-md shadow-md">+ <h1 class=" hidden md:block">Tambah</h1></a>
+                    <a href="/user/tambah" class="flex font-medium bg-blue-500 py-1 md:py-2 px-6 text-white rounded-md shadow-md">+ <h1 class=" hidden md:block">Tambah</h1></a>
                 </div>
             </div>
             <div class="flex w-[365px] md:w-full h-screen ">
@@ -83,45 +83,21 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach( $user as $u )
                                 <tr class="border-b">
-                                    <td class="py-2 text-center">1</td>
-                                    <td class="text-left">Asep</td>
-                                    <td class="text-left">asep@gmail.com</td>
+                                    <td class="py-2 text-center">{{ $loop->iteration}}</td>
+                                    <td class="text-left">{{ $u->name }}</td>
+                                    <td class="text-left">{{ $u->email }}</td>
                                     <td class="text-center">PDF</td>
                                     <td class="text-left">
-                                        <div class="py-1.5 px-5 text-xs font-semibold text-green-500 rounded-full bg-green-50">Aktif</div>
+                                        <div class="py-1.5 px-5 text-xs font-semibold text-green-500 rounded-full bg-green-50">{{ $u->status }}</div>
                                     </td>
-                                    <td class="text-left">01/23/2025</td>
+                                    <td class="text-left">{{ $u->date }}</td>
                                     <td class="text-center">
-                                        <a href="#" class="bg-red-500 py-1 px-4 rounded-md text-white shadow-md">Delete</a>
+                                        <a href="/user/{{ $u->id }}/delete" class="bg-red-500 py-1 px-4 rounded-md text-white shadow-md" onclick="return confirm('Yakin mau di hapus ?')">Delete</a>
                                     </td>
                                 </tr>
-                                <tr class="border-b">
-                                    <td class="py-2 text-center">2</td>
-                                    <td class="text-left">Budi</td>
-                                    <td class="text-left">budi@gmail.com</td>
-                                    <td class="text-center">Excel</td>
-                                    <td class="text-left">
-                                        <div class="py-1.5 px-5 text-xs font-semibold text-orange-500 rounded-full bg-orange-50">Pending</div>
-                                    </td>
-                                    <td class="text-left">01/25/2025</td>
-                                    <td class="text-center">
-                                        <a href="#" class="bg-red-500 py-1 px-4 rounded-md text-white shadow-md">Delete</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="py-2 text-center">3</td>
-                                    <td class="text-left">Caca</td>
-                                    <td class="text-left">caca@gmail.com</td>
-                                    <td class="text-center">CSV</td>
-                                    <td class="text-left">
-                                        <div class="py-1.5 px-5 text-xs font-semibold text-yellow-500 rounded-full bg-yellow-50">In Progress</div>
-                                    </td>
-                                    <td class="text-left">01/26/2025</td>
-                                    <td class="text-center">
-                                        <a href="#" class="bg-red-500 py-1 px-4 rounded-md text-white shadow-md">Delete</a>
-                                    </td>
-                                </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
