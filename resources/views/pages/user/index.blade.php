@@ -56,12 +56,12 @@
                     </button>
                 </div>
                 <div class="mr-2.5 md:mr-5">
-                    <button type="button" class="flex bg-white py-1 px-4 ml-3 rounded-md items-center shadow-md">
+                    <a href="/user/show" type="button" class="flex bg-white py-1 px-4 ml-3 rounded-md items-center shadow-md">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 8.25H7.5a2.25 2.25 0 0 0-2.25 2.25v9a2.25 2.25 0 0 0 2.25 2.25h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25H15m0-3-3-3m0 0-3 3m3-3V15" />
                         </svg>
                         <h1 class="mx-1 text-sm font-normal hidden md:block">Export</h1>
-                    </button>
+                    </a>
                 </div>
                 <div class="flex h-full w-auto items-center ml-2.5 md:ml-5">
                     <a href="/user/tambah" class="flex font-medium bg-blue-500 py-1 md:py-2 px-6 text-white rounded-md shadow-md">+ <h1 class=" hidden md:block">Tambah</h1></a>

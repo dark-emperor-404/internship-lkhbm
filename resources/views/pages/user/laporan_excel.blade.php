@@ -1,3 +1,10 @@
+<?php
+
+header("content-type: application/vnd-ms-excel");
+header("content-Disposition: attachment; filename=laporan-bulanan.xls");
+
+?>
+
 <p align="center" style="font-weight:bold;font-size:16pt">LAPORAN DATA USER</p>
 
 <table border="1" align="center">
@@ -18,7 +25,3 @@
     </tr>
     @endforeach
 </table>
-
-<p align="center">
-    <input type="button" value="Export Excel" onclick="window.open('/user/edit')">
-</p>
