@@ -45,10 +45,6 @@
                 </div>
             </div>
         </div>
-        <!-- <div class=" mt-20 flex justify-center">
-            <h2 class=" text-slate-400 font-medium">Don,t have an account?</h2>
-            <a href="#" class=" font-medium text-blue-500 ml-1">Sing ip</a>
-        </div> -->
     </div>
 </body>
 </html>

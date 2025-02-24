@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Tambah</title>
+    <title>Edit</title>
     @vite('resources/css/app.css')
 </head>
 <body class="bg-gray-200 flex items-center justify-center min-h-screen p-4">
@@ -15,30 +15,30 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                 </svg>
             </a>
-            <h1 class="text-gray-600 font-semibold text-lg">Tambah</h1>
+            <h1 class="text-gray-600 font-semibold text-lg">Edit</h1>
             <div></div>
         </div>
 
-        <form action="/user/simpan" method="post" autocomplete="off" class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <form action="/user/{{$user->id}}/update" method="post" autocomplete="off" class="grid grid-cols-1 gap-4 sm:grid-cols-2">
             @csrf
             <div class="flex flex-col gap-2 sm:col-span-2">
                 <label for="name" class="text-sm font-medium text-gray-700">Nama</label>
-                <input type="text" id="name" name="name" class="border rounded-lg p-2 focus:ring-2 focus:ring-blue-400" placeholder="Name" required>
+                <input type="text" id="{{$user->name}}" name="name" class="border rounded-lg p-2 focus:ring-2 focus:ring-blue-400" placeholder="Name" required>
             </div>
             
             <div class="flex flex-col gap-2">
                 <label for="email" class="text-sm font-medium text-gray-700">Email</label>
-                <input type="email" id="email" name="email" class="border rounded-lg p-2 focus:ring-2 focus:ring-blue-400" placeholder="Email" required>
+                <input type="email" id="{{$user->email}}" name="email" class="border rounded-lg p-2 focus:ring-2 focus:ring-blue-400" placeholder="Email" required>
             </div>
             
             <div class="flex flex-col gap-2">
                 <label for="password" class="text-sm font-medium text-gray-700">Password</label>
-                <input type="password" id="password" name="password" class="border rounded-lg p-2 focus:ring-2 focus:ring-blue-400" placeholder="Password" required>
+                <input type="password" id="{{$user->password}}" name="password" class="border rounded-lg p-2 focus:ring-2 focus:ring-blue-400" placeholder="password" required>
             </div>
             
             <div class="flex flex-col gap-2 sm:col-span-2">
                 <label for="status" class="text-sm font-medium text-gray-700">Status</label>
-                <select id="status" name="status" class="border rounded-lg p-2 focus:ring-2 focus:ring-blue-400">
+                <select id="{{$user->status}}" name="status" class="border rounded-lg p-2 focus:ring-2 focus:ring-blue-400">
                     <option selected>Aktif</option>
                     <option value="pending">Pending</option>
                     <option value="in-progress">In Progress</option>
@@ -47,10 +47,10 @@
             
             <div class="flex flex-col gap-2 sm:col-span-2">
                 <label for="date" class="text-sm font-medium text-gray-700">Date</label>
-                <input type="date" id="date" name="date" class="border rounded-lg p-2 focus:ring-2 focus:ring-blue-400" required>
+                <input type="date" id="{{$user->date}}" name="date" class="border rounded-lg p-2 focus:ring-2 focus:ring-blue-400" required>
             </div>
             
-            <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-200 sm:col-span-2">Simpan</button>
+            <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-200 sm:col-span-2">Update</button>
         </form>
     </div>
 </body>

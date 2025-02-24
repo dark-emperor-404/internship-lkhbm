@@ -51,10 +51,10 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit()
+    public function edit(string $id)
     {
-        $user = User::all();
-        return view('pages.user.laporan_excel', compact('user'));
+        $user = User::find($id);
+        return view('pages.user.edit', compact('user'));
     }
     
     /**
@@ -63,7 +63,14 @@ class UserController extends Controller
     public function update(Request $request, string $id)
     {
         $user = User::find($id);
-        //
+        $user->update([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => bcrypt($request->password),
+            'status' => $request->status,
+            'date' => $request->date,
+        ]);
+        return redirect('/user');
     }
 
     /**
