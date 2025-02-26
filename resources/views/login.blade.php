@@ -14,16 +14,31 @@
             <h2 class=" text-center text-3xl font-bold text-blue-800">cignifi</h2>
         </div>
         <div class=" sm:mx-auto sm:w-full sm:max-w-sm">
-            <form action="/dashboard" method="" autocomplete="off">
-                <h1 class=" font-semibold text-lg text-slate-500">Login to your Account</h1>
-                <div class=" mt-6 text-center">
-                    <input type="email" name="email" id="email" placeholder="   Email" class=" border min-w-full h-[50px] rounded-md shadow-md">
+            <form action="{{ route('actionlogin') }}" method="POST" autocomplete="off">
+                @csrf
+                <h1 class="font-semibold text-lg text-slate-500">Login to your Account</h1>
+
+                {{-- Tampilkan pesan error jika login gagal --}}
+                @if(session('error'))
+                    <p class="text-red-500 text-sm text-center mt-2">{{ session('error') }}</p>
+                @endif
+
+                <div class="mt-6 text-center">
+                    <input type="email" name="email" id="email" placeholder="Email" 
+                        class="border min-w-full h-[50px] rounded-md shadow-md px-3"
+                        value="{{ old('email') }}" required>
                 </div>
-                <div class=" mt-6 text-center">
-                    <input type="password" name="password" id="password" placeholder="  Password" class=" border min-w-full h-[50px] rounded-md shadow-md">
+
+                <div class="mt-6 text-center">
+                    <input type="password" name="password" id="password" placeholder="Password" 
+                        class="border min-w-full h-[50px] rounded-md shadow-md px-3"
+                        required>
                 </div>
-                <div class=" mt-6 text-center">
-                    <button class=" bg-blue-800 text-white min-w-full h-[50px] rounded-md font-medium shadow-md shadow-blue-800">Sign in</button>
+
+                <div class="mt-6 text-center">
+                    <button type="submit" class="bg-blue-800 text-white min-w-full h-[50px] rounded-md font-medium shadow-md shadow-blue-800">
+                        Sign in
+                    </button>
                 </div>
             </form>
         </div>

@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', 'Home Page')
+@section('title', 'User')
 @section('content')
 
 <div class="flex flex-col w-full h-screen">
@@ -50,7 +50,16 @@
                             <td class="text-left">{{ $u->email }}</td>
                             <td class="text-center">PDF</td>
                             <td class="text-left">
-                                <div class="py-1.5 px-5 text-xs font-semibold text-green-500 rounded-full bg-green-50">{{ $u->status }}</div>
+                                @php
+                                    $statusColor = match($u->status) {
+                                        'aktif' => 'py-1.5 px-5 text-xs font-semibold text-green-500 rounded-full bg-green-50',
+                                        'pending' => 'py-1.5 px-5 text-xs font-semibold text-red-500 rounded-full bg-red-50',
+                                        'in-progress' => 'py-1.5 px-5 text-xs font-semibold text-yellow-500 rounded-full bg-yellow-50'
+                                    };
+                                @endphp
+                                <span class="{{ $statusColor }} font-semibold">
+                                    {{ ucfirst($u->status) }}
+                                </span>
                             </td>
                             <td class="text-left">{{ $u->date }}</td>
                             <td class="text-center">

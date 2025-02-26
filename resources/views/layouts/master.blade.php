@@ -38,20 +38,37 @@
                     </div>
                 </div>
                 <div class="flex h-full w-auto items-center mr-4 md:mr-8 ">
-                    <button type="button" id="menu-button" aria-expanded="false" aria-haspopup="true" class="flex text-left items-center">
-                        <div class="pl-10 hidden lg:block">
-                            <img src="/assets/img/kal.png" alt="" class="w-10 h-10 rounded-full hidden lg:block">
+                    <div class="relative">
+                        <!-- Hidden Checkbox sebagai trigger -->
+                        <input type="checkbox" id="dropdown-toggle" class="peer hidden">
+
+                        <!-- Button untuk memicu dropdown -->
+                        <label for="dropdown-toggle" class="flex items-center cursor-pointer">
+                            <div class="pl-10 hidden lg:block">
+                                <img src="/assets/img/kal.png" alt="" class="w-9 h-9 rounded-full hidden lg:block">
+                            </div>
+                                <div class="px-3">
+                                    <p class="font-semibold text-base">{{ Auth::user()->name }}</p>
+                                    <p class="text-sm text-slate-500">{{ Auth::user()->email }}</p>
+                                </div>
+                            <div class="pl-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                    stroke="currentColor" class="size-4 stroke-slate-500">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                </svg>
+                            </div>
+                        </label>
+
+                        <!-- Dropdown Menu -->
+                        <div class="absolute top-full right-0 rounded-lg p-3 mt-1 shadow-md bg-white w-36 opacity-0 scale-95 transform transition-all duration-200 invisible peer-checked:opacity-100 peer-checked:scale-100 peer-checked:visible">
+                            <div class="rounded-md text-center p-1 mt-1 hover:bg-gray-100">
+                                <a href="#" class="text-slate-500">Profile</a>
+                            </div>
+                            <div class="rounded-md text-center p-1 mt-1 hover:bg-gray-100">
+                                <a href="/logout" class="text-slate-500">Logout</a>
+                            </div>
                         </div>
-                        <div class="px-3">
-                            <h1 class="font-semibold text-base">Iyan</h1>
-                            <h1 class="text-sm text-slate-500">iyan@gmail.com</h1>
-                        </div>
-                        <div class="pl-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-4 stroke-slate-500">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                            </svg>
-                        </div>
-                    </button>
+                    </div>
                 </div>
             </div>
             @yield('content')

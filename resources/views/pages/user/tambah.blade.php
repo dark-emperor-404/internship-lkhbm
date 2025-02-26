@@ -23,23 +23,38 @@
             @csrf
             <div class="flex flex-col gap-2 sm:col-span-2">
                 <label for="name" class="text-sm font-medium text-gray-700">Nama</label>
-                <input type="text" id="name" name="name" class="border rounded-lg p-2 focus:ring-2 focus:ring-blue-400" placeholder="Name" required>
+                <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                class="border rounded-lg p-2 focus:ring-2 focus:ring-blue-400" 
+                placeholder="Name" required>
             </div>
             
             <div class="flex flex-col gap-2">
                 <label for="email" class="text-sm font-medium text-gray-700">Email</label>
-                <input type="email" id="email" name="email" class="border rounded-lg p-2 focus:ring-2 focus:ring-blue-400" placeholder="Email" required>
+                <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                class="border rounded-lg p-2 focus:ring-2 focus:ring-blue-400" 
+                placeholder="Email" required>
             </div>
             
             <div class="flex flex-col gap-2">
                 <label for="password" class="text-sm font-medium text-gray-700">Password</label>
-                <input type="password" id="password" name="password" class="border rounded-lg p-2 focus:ring-2 focus:ring-blue-400" placeholder="Password" required>
+                <input 
+                type="password" 
+                id="password" 
+                name="password" 
+                class="border rounded-lg p-2 focus:ring-2 focus:ring-blue-400" 
+                placeholder="Password" required>
             </div>
             
             <div class="flex flex-col gap-2 sm:col-span-2">
                 <label for="status" class="text-sm font-medium text-gray-700">Status</label>
                 <select id="status" name="status" class="border rounded-lg p-2 focus:ring-2 focus:ring-blue-400">
-                    <option selected>Aktif</option>
+                    <option value="aktif">Aktif</option>
                     <option value="pending">Pending</option>
                     <option value="in-progress">In Progress</option>
                 </select>
@@ -47,7 +62,11 @@
             
             <div class="flex flex-col gap-2 sm:col-span-2">
                 <label for="date" class="text-sm font-medium text-gray-700">Date</label>
-                <input type="date" id="date" name="date" class="border rounded-lg p-2 focus:ring-2 focus:ring-blue-400" required>
+                <input 
+                type="date" 
+                id="date" 
+                name="date" 
+                class="border rounded-lg p-2 focus:ring-2 focus:ring-blue-400" required>
             </div>
             
             <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-200 sm:col-span-2">Simpan</button>
