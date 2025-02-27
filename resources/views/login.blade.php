@@ -8,8 +8,8 @@
     <title>Login</title>
     @vite('resources/css/app.css')
 </head>
-<body>
-    <div class="flex min-h-full flex-col justify-center px-10 py-12 lg:px-8">
+<body class="flex min-h-screen p-16 items-center justify-center bg-gray-100">
+    <div class=" w-1/2 p-8 bg-white rounded-lg shadow-lg">
         <div class=" sm:mx-auto sm:w-full sm:max-w-sm my-12">
             <h2 class=" text-center text-3xl font-bold text-blue-800">cignifi</h2>
         </div>
@@ -36,7 +36,7 @@
                 </div>
 
                 <div class="mt-6 text-center">
-                    <button type="submit" class="bg-blue-800 text-white min-w-full h-[50px] rounded-md font-medium shadow-md shadow-blue-800">
+                    <button type="submit" class="w-full h-12 bg-blue-800 text-white font-medium rounded-md hover:bg-blue-900 shadow-md shadow-blue-800">
                         Sign in
                     </button>
                 </div>
