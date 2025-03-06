@@ -1,57 +1,53 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Laporan;
 use App\Models\User;
 
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+class LaporanController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
+        $laporan = Laporan::all();
         $user = User::all();
-        return view("pages.user.index", compact('user'));
+        return view("pages.laporan.index", compact('laporan','user'));
     }
-
-    public function profil()
-    {
-        $user = User::all();
-        return view("pages.user.profil", compact('user'));
-    }
-
+    
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
-        return view("pages.user.tambah");
+        $user = User::all();
+        return view("pages.laporan.tambah", compact('user'));
     }
-
+    
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
     {
-        user::create([
+        laporan::create([
             'name' => $request->name,
-            'email' => $request->email,
-            'password' => bcrypt($request->password),
+            'id_user' => $request->id_user,
             'status' => $request->status,
             'date' => $request->date
         ]);
-        return redirect('/user');
+        return redirect('/laporan');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show()
+    public function show(string $id)
     {
-        $user = User::all();
-        return view("pages.user.laporan", compact('user'));
+        $laporan = Laporan::all();
+        return view("pages.laporan.laporan", compact('laporan'));
     }
     
     /**
@@ -59,24 +55,24 @@ class UserController extends Controller
      */
     public function edit(string $id)
     {
-        $user = User::find($id);
-        return view('pages.user.edit', compact('user'));
+        $laporan = Laporan::find($id);
+        $user = User::all();
+        return view('pages.laporan.edit', compact('laporan','user'));
     }
-    
+
     /**
      * Update the specified resource in storage.
      */
     public function update(Request $request, string $id)
-    {
-        $user = User::find($id);
-        $user->update([
+    {   
+        $laporan = Laporan::find($id);
+        $laporan->update([
             'name' => $request->name,
-            'email' => $request->email,
-            'password' => bcrypt($request->password),
+            'id_user' => $request->id_user,
             'status' => $request->status,
             'date' => $request->date,
         ]);
-        return redirect('/user');
+        return redirect('/laporan');
     }
 
     /**
@@ -84,8 +80,8 @@ class UserController extends Controller
      */
     public function destroy(string $id)
     {
-        $user = User::find($id);
-        $user->delete();
-        return redirect('/user');
+        $laporan = Laporan::find($id);
+        $laporan->delete();
+        return redirect('/laporan');
     }
 }

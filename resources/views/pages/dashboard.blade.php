@@ -51,7 +51,7 @@
                             <td class="text-center">PDF</td>
                             <td class="text-left">
                             @php
-                                    $statusColor = match($u->status) {
+                                    $statusColor = match(strtolower($u->status)) {
                                         'aktif' => 'py-1.5 px-5 text-xs font-semibold text-green-500 rounded-full bg-green-50',
                                         'pending' => 'py-1.5 px-5 text-xs font-semibold text-red-500 rounded-full bg-red-50',
                                         'in-progress' => 'py-1.5 px-5 text-xs font-semibold text-yellow-500 rounded-full bg-yellow-50'

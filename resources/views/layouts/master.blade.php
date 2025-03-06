@@ -44,8 +44,8 @@
 
                         <!-- Button untuk memicu dropdown -->
                         <label for="dropdown-toggle" class="flex items-center cursor-pointer">
-                            <div class="pl-10 hidden lg:block">
-                                <img src="/assets/img/kal.png" alt="" class="w-9 h-9 rounded-full hidden lg:block">
+                            <div class="pl-7 hidden lg:block">
+                                <img src="/assets/img/kal.png" alt="" class="w-10 h-10 rounded-full hidden lg:block">
                             </div>
                                 <div class="px-3">
                                     <p class="font-semibold text-base">{{ Auth::user()->name }}</p>
@@ -62,7 +62,7 @@
                         <!-- Dropdown Menu -->
                         <div class="absolute top-full right-0 rounded-lg p-3 mt-1 shadow-md bg-white w-36 opacity-0 scale-95 transform transition-all duration-200 invisible peer-checked:opacity-100 peer-checked:scale-100 peer-checked:visible">
                             <div class="rounded-md text-center p-1 mt-1 hover:bg-gray-100">
-                                <a href="#" class="text-slate-500">Profile</a>
+                                <a href="/profil" class="text-slate-500">Profile</a>
                             </div>
                             <div class="rounded-md text-center p-1 mt-1 hover:bg-gray-100">
                                 <a href="/logout" class="text-slate-500">Logout</a>

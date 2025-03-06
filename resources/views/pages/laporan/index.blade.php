@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', 'User')
+@section('title', 'Laporan')
 @section('content')
 
 <div class="flex flex-col w-full h-screen">
@@ -16,7 +16,7 @@
             </button>
         </div>
         <div class="mr-2.5 md:mr-5">
-            <a href="/user/show" type="button" class="flex bg-white py-1 px-4 ml-3 rounded-md items-center shadow-md">
+            <a href="/laporan/show" type="button" class="flex bg-white py-1 px-4 ml-3 rounded-md items-center shadow-md">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 8.25H7.5a2.25 2.25 0 0 0-2.25 2.25v9a2.25 2.25 0 0 0 2.25 2.25h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25H15m0-3-3-3m0 0-3 3m3-3V15" />
                 </svg>
@@ -24,7 +24,7 @@
             </a>
         </div>
         <div class="flex h-full w-auto items-center ml-2.5 md:ml-5">
-            <a href="user/tambah" class="flex font-medium bg-blue-500 py-1 md:py-2 px-6 text-white rounded-md shadow-md">+ <h1 class=" hidden md:block">Tambah</h1></a>
+            <a href="laporan/tambah" class="flex font-medium bg-blue-500 py-1 md:py-2 px-6 text-white rounded-md shadow-md">+ <h1 class=" hidden md:block">Tambah</h1></a>
         </div>
     </div>
     <div class="flex w-[365px] md:w-full h-full ">
@@ -43,28 +43,28 @@
                         </tr>
                     </thead>
                     <tbody>
-                    @foreach( $user as $u )
+                    @foreach( $laporan as $l )
                         <tr class="border-b">
                             <td class="py-2 text-center">{{ $loop->iteration}}</td>
-                            <td class="text-left">{{ $u->name }}</td>
-                            <td class="text-left">{{ $u->email }}</td>
+                            <td class="text-left">{{ $l->name }}</td>
+                            <td class="text-left">{{ $l->user->email }}</td>
                             <td class="text-center">PDF</td>
                             <td class="text-left">
                                 @php
-                                    $statusColor = match(strtolower($u->status)) {
+                                    $statusColor = match(strtolower($l->status)) {
                                         'aktif' => 'py-1.5 px-5 text-xs font-semibold text-green-500 rounded-full bg-green-50',
                                         'pending' => 'py-1.5 px-5 text-xs font-semibold text-red-500 rounded-full bg-red-50',
                                         'in-progress' => 'py-1.5 px-5 text-xs font-semibold text-yellow-500 rounded-full bg-yellow-50'
                                     };
                                 @endphp
                                 <span class="{{ $statusColor }} font-semibold">
-                                    {{ ucfirst($u->status) }}
+                                    {{ ucfirst($l->status) }}
                                 </span>
                             </td>
-                            <td class="text-left">{{ $u->date }}</td>
+                            <td class="text-left">{{ $l->date }}</td>
                             <td class="text-center">
-                                <a href="/user/{{ $u->id }}/edit" class=" bg-yellow-300 py-1 px-4 rounded-md text-white shadow-md">Edit</a>
-                                <a href="/user/{{ $u->id }}/delete" class=" bg-red-500 py-1 px-4 rounded-md text-white shadow-md" onclick="return confirm('Yakin mau di hapus ?')">Delete</a>
+                                <a href="/laporan/{{ $l->id }}/edit" class=" bg-yellow-300 py-1 px-4 rounded-md text-white shadow-md">Edit</a>
+                                <a href="/laporan/{{ $l->id }}/delete" class=" bg-red-500 py-1 px-4 rounded-md text-white shadow-md" onclick="return confirm('Yakin mau di hapus ?')">Delete</a>
                             </td>
                         </tr>
                         @endforeach
